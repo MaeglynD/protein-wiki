@@ -8,7 +8,7 @@
 <p align="center">A molecular explorer for the Protein Data Bank.</p>
 
 <p align="center">
-  <a href="https://github.com/MaeglynD/protein-visualiser/actions/workflows/ci.yml"><img src="https://github.com/MaeglynD/protein-visualiser/actions/workflows/ci.yml/badge.svg" alt="Build and checks"></a>
+  <a href="https://github.com/MaeglynD/protein-wiki/actions/workflows/ci.yml"><img src="https://github.com/MaeglynD/protein-wiki/actions/workflows/ci.yml/badge.svg" alt="Build and checks"></a>
   <a href="https://molstar.org/"><img src="https://img.shields.io/badge/renderer-Mol%2A-74877c?style=flat&labelColor=414942" alt="Rendered with Mol*"></a>
   <a href="https://www.rcsb.org/"><img src="https://img.shields.io/badge/data-PDB-a88c66?style=flat&labelColor=414942" alt="Data from the Protein Data Bank"></a>
 </p>
@@ -30,7 +30,7 @@
 Use Node.js 22.12+ and [pnpm](https://pnpm.io/installation) 10.
 
 ```sh
-git clone https://github.com/MaeglynD/protein-visualiser.git
+git clone https://github.com/MaeglynD/protein-wiki.git
 cd protein-visualiser
 pnpm install --frozen-lockfile
 pnpm dev
