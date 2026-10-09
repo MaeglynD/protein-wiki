@@ -1,0 +1,32 @@
+const paths = {
+ search:'<circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/>',
+ arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',
+ chevron:'<path d="m9 5 7 7-7 7"/>',
+ close:'<path d="m6 6 12 12M6 18 18 6"/>',
+ bookmark:'<path d="M6 4h12v17l-6-4-6 4z"/>',
+ sparkle:'<path d="m12 3 2.6 6.4L21 12l-6.4 2.6L12 21l-2.6-6.4L3 12l6.4-2.6z"/>',
+ grid:'<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>',
+ reset:'<path d="M4 9a8 8 0 1 1 0 6M4 4v5h5"/>',
+ play:'<path d="m8 4 12 8-12 8z"/>',
+ pause:'<path d="M8 5v14M16 5v14"/>',
+ expand:'<path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/>',
+ sliders:'<path d="M4 7h6m4 0h6M4 17h10m4 0h2"/><circle cx="12" cy="7" r="2"/><circle cx="16" cy="17" r="2"/>',
+ share:'<path d="M12 15V3m-4 4 4-4 4 4M5 12v8h14v-8"/>',
+ info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/>',
+ check:'<path d="m5 12 4 4L19 6"/>',
+ shuffle:'<path d="M3 5h3l12 14h3M3 19h3l4-5m4-4 4-5h3m-4-3 4 3-4 3m0 8 4 3-4 3"/>',
+ download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',
+ focus:'<circle cx="12" cy="12" r="4"/><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/>',
+ ruler:'<path d="m3 16 13-13 5 5L8 21zM7 12l2 2m2-6 2 2m2-6 2 2"/>',
+ eraser:'<path d="m15 3 6 6-10 10H5l-3-3L15 3ZM8 10l6 6M11 19h10"/>',
+ help:'<circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 5m0 3v.1"/>',
+ atom:'<circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)"/>',
+ ribbon:'<path d="M4 5c10-7 16 5 7 6S3 22 20 18M4 8c10-7 16 5 7 6S6 24 20 21"/>',
+ surface:'<path d="M11 3c3 0 3 4 6 4 6 0 6 9 1 10-1 6-9 5-10 1-7 0-8-9-3-11 0-3 3-4 6-4Z"/>',
+ external:'<path d="M14 3h7v7m0-7L10 14M10 4H4v16h16v-6"/>',
+ back:'<path d="M19 12H5m5-5-5 5 5 5"/>',
+ mouse:'<rect x="7" y="2" width="10" height="20" rx="5"/><path d="M12 6v4"/>',
+ moon:'<path d="M20 15A9 9 0 0 1 9 4a9 9 0 1 0 11 11Z"/>'
+};
+export const icon=(name,cls='')=>`<svg class="icon ${cls}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.atom}</svg>`;
+export const brand=`<svg viewBox="0 0 34 36" width="30" height="32" fill="none" aria-hidden="true"><path d="M17 3C7 3 2 14 8 21c5 6 16 5 19-3C31 8 23 2 17 3Z" stroke="currentColor" stroke-width="1.3"/><path d="M25 7C14 1 5 8 7 18c2 10 13 17 20 10 7-8 4-17-2-21Z" stroke="currentColor" stroke-width="1.3"/><path d="M9 7C0 14 5 29 15 31c10 2 16-10 9-17C18 8 13 4 9 7Z" stroke="currentColor" stroke-width="1.3"/></svg>`;

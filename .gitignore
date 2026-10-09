@@ -1,0 +1,58 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+.npm/
+
+# Generated builds, caches and test reports
+/dist/
+/build/
+/coverage/
+.nyc_output/
+.vite/
+.vite-temp/
+.cache/
+*.tsbuildinfo
+/playwright-report/
+/test-results/
+
+# Local environment and hosting state (keep hosting.json tracked)
+.env
+.env.*
+!.env.example
+!.env.*.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.wrangler/
+.openai/*.local.*
+.openai/site-workflow*
+
+# Logs and diagnostic dumps
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.*.json
+
+# Local notes and scratch files
+/prompts-and-responses/
+/work/
+/tmp/
+/temp/
+/forma-*-deployment.tar.gz
+
+# Editor and operating-system files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+.openai

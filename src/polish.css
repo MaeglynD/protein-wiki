@@ -1,0 +1,32 @@
+/* The label never translates when content changes. Its info icon belongs to line one. */
+.structure-label{--title-size:clamp(19px,2vw,28px);--title-gap:8px}
+#structure-details{display:grid;grid-template-columns:minmax(0,1fr) 15px;column-gap:13px;padding:0;max-width:100%}
+#structure-id,#structure-meta{grid-column:1 / -1}
+#structure-name{grid-column:1;grid-row:2;font-size:var(--title-size);line-height:1.25;margin:var(--title-gap) 0}
+#structure-details>.icon{position:static;grid-column:2;grid-row:2;align-self:start;width:15px;height:15px;margin-top:calc(var(--title-gap) + var(--title-size) * .625 - 7.5px)}
+.results-scroll{padding-top:16px;scroll-padding-top:18px;mask-image:linear-gradient(transparent,black 6px,black calc(100% - 25px),transparent)}
+.discovery-foot{justify-content:flex-end}
+/* Scrollable chip groups need room for lifted hover states and focus outlines. */
+.chain-list,.ligand-list{padding:8px;margin:2px -8px -8px;scroll-padding:8px}
+.chain-list button[aria-pressed=true],.ligand-list button[aria-pressed=true]{background:var(--active);border-color:color-mix(in srgb,var(--accent) 45%,transparent);color:var(--text);box-shadow:inset 0 1px 0 var(--edge)}
+.display-launcher{position:absolute;right:30px;bottom:30px;z-index:6;transition:bottom .75s var(--motion)}
+.display-launcher .icon-button{width:49px;height:49px;border-radius:15px;border:1px solid var(--line);backdrop-filter:blur(26px);box-shadow:0 12px 40px #0004,inset 0 1px 0 #ffffff0b}
+.display-launcher .icon-button[aria-expanded=true]{color:var(--text);background:var(--surface-raised)}
+#selection{width:278px;padding:15px;overflow:auto}
+.selection-actions{gap:6px;margin-top:11px}
+.selection-actions button{padding:8px 10px;border-radius:8px;transition:background .25s,color .25s;white-space:nowrap}
+.selection-actions button:hover{background:var(--hover);color:var(--text)}
+.selection-actions button:first-child{background:var(--wash)}
+/* Fade JPEG preview edges into the stage; no rectangular failure-state image. */
+.load-layer img.remote{mask-image:radial-gradient(ellipse closest-side,black 54%,transparent 98%)}
+@media(max-width:1000px) and (min-width:681px){.display-launcher{right:22px;bottom:22px}}
+@media(max-width:680px){
+ .structure-label{--title-size:20px;--title-gap:6px}
+ #structure-name{-webkit-line-clamp:2}
+ .results-scroll{padding-top:9px;mask-image:linear-gradient(90deg,transparent,black 8px,black calc(100% - 14px),transparent)}
+ .display-launcher{right:16px;bottom:222px}
+ .display-launcher .icon-button{width:44px;height:45px;border-radius:13px}
+ .scene-bottom{right:60px;left:8px}
+ .immersive .display-launcher{bottom:28px}
+ #selection{width:278px;padding:15px}
+}

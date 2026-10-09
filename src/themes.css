@@ -1,0 +1,107 @@
+@property --base{syntax:"<color>";inherits:true;initial-value:#10161d}
+@property --text{syntax:"<color>";inherits:true;initial-value:#dbe6eb}
+@property --secondary{syntax:"<color>";inherits:true;initial-value:#bccbd3}
+@property --muted{syntax:"<color>";inherits:true;initial-value:#91a8b6}
+@property --quiet{syntax:"<color>";inherits:true;initial-value:#718b9b}
+@property --accent{syntax:"<color>";inherits:true;initial-value:#b4dce2}
+@property --surface{syntax:"<color>";inherits:true;initial-value:#1b2731}
+@property --surface-raised{syntax:"<color>";inherits:true;initial-value:#27343f}
+@property --panel{syntax:"<color>";inherits:true;initial-value:#1b2935}
+@property --panel-top{syntax:"<color>";inherits:true;initial-value:#27343f}
+@property --line{syntax:"<color>";inherits:true;initial-value:#b4d6e426}
+@property --hover{syntax:"<color>";inherits:true;initial-value:#b4d8e41c}
+@property --wash{syntax:"<color>";inherits:true;initial-value:#a5cbd70e}
+@property --active{syntax:"<color>";inherits:true;initial-value:#b7d7df22}
+@property --glow{syntax:"<color>";inherits:true;initial-value:#253742a1}
+@property --glow-outer{syntax:"<color>";inherits:true;initial-value:#18242d45}
+@property --glow-low{syntax:"<color>";inherits:true;initial-value:#31303630}
+@property --shadow{syntax:"<color>";inherits:true;initial-value:#02070d80}
+@property --edge{syntax:"<color>";inherits:true;initial-value:#effaff0c}
+/* Each palette defines the whole foreground and its protective light fields. */
+:root{
+ --base:#10161d;--text:#dbe6eb;--secondary:#bccbd3;--muted:#91a8b6;--quiet:#718b9b;--accent:#b4dce2;
+ --surface:#1b2731;--surface-raised:#27343f;--panel:#1b2935;--panel-top:#27343f;
+ --line:#b4d6e426;--hover:#b4d8e41c;--wash:#a5cbd70e;--active:#b7d7df22;--glow:#253742a1;--glow-outer:#18242d45;--glow-low:#31303630;
+ --shadow:#02070d80;--edge:#effaff0c;--preview-filter:invert(1) hue-rotate(180deg) saturate(.8) brightness(1.2);--preview-blend:screen;
+ --local-filter:brightness(1.14) saturate(.88);--local-hover:brightness(1.23) saturate(.95)
+}
+:root[data-theme=graphite]{
+ --base:#191816;--text:#eae5da;--secondary:#c8c1b5;--muted:#aaa194;--quiet:#8b8377;--accent:#d9c399;
+ --surface:#292721;--surface-raised:#35312a;--panel:#29261f;--panel-top:#38332c;
+ --line:#e0cda427;--hover:#dac69f1c;--wash:#cfc2a80c;--active:#dbccb024;--glow:#46403689;--glow-outer:#332f2442;--glow-low:#57412a29;
+ --shadow:#0b090880;--edge:#fff4d90e
+}
+:root[data-theme=juniper]{
+ --base:#10201c;--text:#e0e9da;--secondary:#becfc1;--muted:#98b0a2;--quiet:#729286;--accent:#cbd7a2;
+ --surface:#20342b;--surface-raised:#2b4034;--panel:#1c3028;--panel-top:#2b4135;
+ --line:#c6dec329;--hover:#c7dca71a;--wash:#b7d7b30e;--active:#c4d6a523;--glow:#38594388;--glow-outer:#223e3045;--glow-low:#63704b20;
+ --shadow:#020e0985;--edge:#eeffde0e
+}
+:root[data-theme=aubergine]{
+ --base:#201820;--text:#eee1e6;--secondary:#d0bec9;--muted:#b19aa9;--quiet:#917785;--accent:#e5b6b4;
+ --surface:#352731;--surface-raised:#45323d;--panel:#33242f;--panel-top:#43313d;
+ --line:#e5bdce29;--hover:#e7bdc41c;--wash:#d4bacb0e;--active:#e6bac323;--glow:#573d548a;--glow-outer:#3e293e45;--glow-low:#774d4027;
+ --shadow:#0e040f85;--edge:#ffe9f10f
+}
+:root[data-theme=porcelain]{
+ --base:#e9e6de;--text:#343a34;--secondary:#525d54;--muted:#697368;--quiet:#7a8073;--accent:#717d55;
+ --surface:#eeeae2;--surface-raised:#f7f3eb;--panel:#f2eee6;--panel-top:#fcf9f2;
+ --line:#746f562e;--hover:#7f80631a;--wash:#777b600b;--active:#7a826329;--glow:#fffdf2d9;--glow-outer:#eeeee59c;--glow-low:#b1ab8d20;
+ --shadow:#574d3825;--edge:#ffffffaa;--preview-filter:saturate(.75) contrast(.95);--preview-blend:multiply;
+ --local-filter:brightness(.68) saturate(.95);--local-hover:brightness(.76) saturate(1.05)
+}
+html,body{background:var(--base);color:var(--text)}
+.world{background:var(--base);color:var(--text);transition:background-color .8s ease,color .5s}
+.world:after{box-shadow:inset 0 0 180px color-mix(in srgb,var(--shadow) 45%,transparent)}
+.atmosphere{background:radial-gradient(ellipse at 67% 42%,var(--glow),var(--glow-outer) 39%,transparent 65%),radial-gradient(ellipse at 90% 88%,var(--glow-low),transparent 48%)}
+.discovery-shield{background:linear-gradient(90deg,var(--base) 0%,color-mix(in srgb,var(--base) 98%,transparent) 64%,color-mix(in srgb,var(--base) 85%,transparent) 77%,transparent 100%)}
+.structure-label:before{background:var(--base)}
+.scene-bottom:before{background:radial-gradient(ellipse,var(--base) 20%,color-mix(in srgb,var(--base) 80%,transparent) 40%,transparent 72%)}
+.scene-shadow{background:var(--shadow)}
+.glass,.search,.control-dock,.display-launcher .icon-button{background:linear-gradient(135deg,color-mix(in srgb,var(--surface-raised) 95%,transparent),color-mix(in srgb,var(--surface) 97%,transparent));border-color:var(--line);box-shadow:0 12px 40px var(--shadow),inset 0 1px 0 var(--edge)}
+.popover,#selection,.choice-menu{background:linear-gradient(135deg,color-mix(in srgb,var(--panel-top) 98%,transparent),color-mix(in srgb,var(--panel) 99%,transparent));border-color:var(--line);box-shadow:0 24px 70px var(--shadow),inset 0 1px 0 var(--edge)}
+.ui-tooltip,#hover-label,.toast{background:color-mix(in srgb,var(--panel) 98%,transparent);color:var(--text);border-color:var(--line)}
+.search input,h1,.popover-heading,.empty-state b{color:var(--text)}
+.search input::placeholder,.search>.icon,.search-meta,.search-meta button,.structure-label #structure-meta,#structure-id,.card-label>span,.icon-button,.representations button,.popover label,.inspector-facts,.popover dt,.scientific-note,.part-section small,.utility-actions button,.source-link,.selection-actions,#context-bar button,#clear-selection,.discovery-foot,.empty-state,.fetching,#search-hint{color:var(--muted)}
+.card-label b,.entry-title,.popover dd,.part-section>span,.chain-list button,.ligand-list button,#selection-text,#context-bar,.choice-menu button{color:var(--secondary)}
+.selected .card-label b,.molecule:hover .card-label b,.representations button:hover,.representations button.active,.search-meta button:hover,.search-meta button[aria-expanded=true],.icon-button:hover,.popover-heading button:hover,.choice-menu button:hover,.choice-menu button:focus-visible{color:var(--text)}
+.card-label i,.end-results,.search kbd{color:var(--quiet)}
+#structure-details>.icon,.popover-heading button,.choice .icon{color:var(--quiet)}
+#structure-details:hover>.icon,.choice[aria-expanded=true] .icon,.choice-menu button .icon{color:var(--accent)}
+.selected-dot{background:var(--accent);box-shadow:0 0 9px var(--accent)}
+.representations button.active{background:var(--active);box-shadow:inset 0 1px 0 var(--edge),0 3px 8px color-mix(in srgb,var(--shadow) 35%,transparent)}
+.divider{background:var(--line)}
+.icon-button:hover,.search-meta button:hover,.search-meta button[aria-expanded=true],.popover-heading button:hover,.choice-menu button:hover,.choice-menu button:focus-visible,.chain-list button:hover,.ligand-list button:hover{background:var(--hover)}
+.browse-toggle .icon-button:hover{background:var(--surface-raised);border-color:var(--line);color:var(--text)}
+.thumbnail{background:radial-gradient(ellipse at 50% 60%,var(--wash),transparent 72%)}
+.thumbnail:before{background:radial-gradient(ellipse,var(--hover),transparent 70%)}
+.thumbnail img{filter:var(--local-filter)}
+.molecule:hover .thumbnail.ready img,.molecule:focus-visible .thumbnail.ready img{filter:var(--local-hover)}
+.molecule:hover .thumbnail,.molecule:focus-visible .thumbnail,.molecule.selected .thumbnail{background-color:var(--wash);border-color:var(--line);box-shadow:inset 0 0 24px var(--wash)}
+.molecule .thumbnail.remote{background:var(--base)}
+.thumbnail.remote img,.molecule:hover .thumbnail.remote img,.molecule:focus-visible .thumbnail.remote img{filter:var(--preview-filter);mix-blend-mode:var(--preview-blend)}
+.load-layer img.remote{filter:var(--preview-filter);mix-blend-mode:var(--preview-blend)}
+.choice{background:linear-gradient(135deg,var(--wash),transparent);color:var(--text);border-color:var(--line)}
+.choice:hover,.choice[aria-expanded=true]{background:var(--wash);border-color:color-mix(in srgb,var(--accent) 35%,transparent);box-shadow:0 0 0 3px var(--wash)}
+.choice-menu button[aria-selected=true]{color:var(--text);background:var(--wash)}
+.chain-list button,.ligand-list button,.search kbd{border-color:var(--line)}
+.search:focus-within{border-color:color-mix(in srgb,var(--accent) 40%,transparent);box-shadow:0 0 0 4px var(--wash),0 10px 36px var(--shadow)}
+.search:after{background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+#filter-count{background:var(--active);color:var(--text)}
+.loading-copy{background:radial-gradient(ellipse,var(--base) 15%,color-mix(in srgb,var(--base) 83%,transparent) 45%,transparent 76%)}
+.loading-copy>span{color:var(--secondary)}
+.progress-track i{background:var(--line)}.progress-track i.done{background:var(--accent)}.progress-track i.current{background:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 0 12px var(--wash)}
+#retry-load,.empty-state button,#load-more{color:var(--secondary);background:var(--hover);border-color:var(--line)}
+.spinner{border-color:var(--line);border-top-color:var(--accent)}
+.skeleton i{background:radial-gradient(ellipse,var(--wash),transparent 65%)}.skeleton span{background:var(--wash)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,.molecule:focus-visible{outline-color:var(--accent)}
+::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--muted) 30%,transparent)}
+::selection{background:var(--accent);color:var(--base)}
+@media(max-width:680px){
+ .atmosphere{background:radial-gradient(ellipse at 50% 38%,var(--glow),transparent 70%)}
+ .discovery-shield{background:linear-gradient(0deg,var(--base),color-mix(in srgb,var(--base) 98%,transparent) 76%,color-mix(in srgb,var(--base) 65%,transparent) 88%,transparent)}
+ .browse-toggle .icon-button{background:var(--surface);border-color:var(--line)}
+}
+
+:root{transition:--base .75s ease,--text .75s ease,--secondary .75s ease,--muted .75s ease,--quiet .75s ease,--accent .75s ease,--surface .75s ease,--surface-raised .75s ease,--panel .75s ease,--panel-top .75s ease,--line .75s ease,--hover .75s ease,--wash .75s ease,--active .75s ease,--glow .75s ease,--glow-outer .75s ease,--glow-low .75s ease,--shadow .75s ease,--edge .75s ease}
+.world{transition:none}
