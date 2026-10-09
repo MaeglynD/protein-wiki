@@ -173,7 +173,7 @@ export class MolecularStage {
     helper.values;helper.behaviors.values.next({...helper.values,resolution:{name:'custom',params:{width:thumbnail?440:1800,height:thumbnail?340:1350}},transparent:thumbnail,format:{name:'png',params:{}}});
     return helper.getImageDataUri();
   }
-  async downloadImage(){const uri=await this.screenshot(false);const a=document.createElement('a');a.href=uri;a.download=`forma-${this.item.id.toLowerCase()}.png`;a.click();}
+  async downloadImage(){const uri=await this.screenshot(false);const a=document.createElement('a');a.href=uri;a.download=`protein-wiki-${this.item.id.toLowerCase()}.png`;a.click();}
   dispose(){this.resizeObserver?.disconnect();this.plugin?.dispose();}
 }
 

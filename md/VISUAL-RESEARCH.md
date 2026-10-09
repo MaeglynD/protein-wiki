@@ -1,4 +1,4 @@
-# Forma visual curation research — 9 October 2026
+# protein.wiki visual curation research — 9 October 2026
 
 ## Recommendation
 

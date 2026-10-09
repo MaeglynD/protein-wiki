@@ -30,3 +30,7 @@
  .immersive .display-launcher{bottom:28px}
  #selection{width:278px;padding:15px}
 }
+
+/* Match the outer breathing room without narrowing the molecular cards. */
+@media(min-width:681px){.results-scroll{padding-right:24px;margin-right:-26px}}
+@media(min-width:681px) and (max-width:1000px){.results-scroll{padding-right:18px;margin-right:-20px}}

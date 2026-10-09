@@ -1,8 +1,8 @@
-# Deploy Forma
+# Deploy protein.wiki
 
-Public app: https://forma-molecular-explorer.abelian.workers.dev
+Public app: https://protein.wiki
 
-Forma is a static Vite application. Cloudflare Workers Static Assets serves the built files directly; no Worker script or server is needed.
+protein.wiki is a static Vite application. Cloudflare Workers Static Assets serves the built files directly; no Worker script or server is needed.
 
 ## Publish from your machine
 
@@ -14,7 +14,7 @@ pnpm deploy
 
 If pnpm is not on your shell PATH after dependencies have been installed, sign in with `node node_modules/wrangler/bin/wrangler.js login`.
 
-The checked-in configuration uses the project name `forma-molecular-explorer` and uploads only `dist/`. Wrangler prints the deployed URL. No credentials belong in source control.
+The checked-in configuration retains the existing Worker identity, binds `protein.wiki` as a Custom Domain, and uploads only `dist/`. Wrangler prints the deployed URL. No credentials belong in source control.
 
 ## Continuous deployment
 
@@ -22,7 +22,7 @@ GitHub Actions runs the build and coordinate recovery checks. For automatic publ
 
 ## Domain and analytics
 
-A `workers.dev` address works without purchasing a domain. Add a domain later under **Settings → Domains & Routes → Add → Custom Domain**. Choose and purchase the domain yourself before connecting it. After changing the primary domain, update the canonical, Open Graph and Twitter image URLs in index.html and the live link in README.md.
+`protein.wiki` is the primary domain. Wrangler manages its Custom Domain binding, and Cloudflare manages DNS and TLS certificates. If the primary domain changes, update the canonical, Open Graph and Twitter image URLs in index.html and the live link in README.md.
 
 Cloudflare Web Analytics can be added separately with its public beacon token. The app does not currently load an analytics beacon. Standard page-view and performance metrics are sufficient; molecular searches and picked atoms do not need custom tracking.
 

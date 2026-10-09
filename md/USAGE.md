@@ -1,4 +1,4 @@
-# Forma — Technical guide
+# protein.wiki — Technical guide
 
 A continuous 3D workspace for finding and inspecting experimental molecular structures. Search and visual results float over a softly lit Mol* stage. There is no navigation bar, fixed sidebar, saved collection, autoplay, or promotional copy.
 

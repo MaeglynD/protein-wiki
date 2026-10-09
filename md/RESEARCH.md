@@ -1,4 +1,4 @@
-# Forma catalogue: sources and interpretation
+# protein.wiki catalogue: sources and interpretation
 
 Verified on 9 October 2026 against the RCSB PDB Data API. The catalogue contains 36 experimental PDB entries. Each chosen entry and biological assembly 1 was retrieved successfully from `https://data.rcsb.org/rest/v1/core/entry/{id}` and `https://data.rcsb.org/rest/v1/core/assembly/{id}/1`. Polymer-entity and nonpolymer-entity endpoints were also checked where organism identity or a highlighted cofactor mattered.
 

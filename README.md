@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="md/media/forma-dark.svg">
-    <img src="md/media/forma-light.svg" alt="Forma" width="300">
+    <source media="(prefers-color-scheme: dark)" srcset="md/media/protein-wiki-dark.svg">
+    <img src="md/media/protein-wiki-light.svg" alt="protein.wiki" width="370">
   </picture>
 </p>
 
@@ -13,9 +13,9 @@
   <a href="https://www.rcsb.org/"><img src="https://img.shields.io/badge/data-PDB-a88c66?style=flat&labelColor=414942" alt="Data from the Protein Data Bank"></a>
 </p>
 
-<p align="center"><strong><a href="https://forma-molecular-explorer.abelian.workers.dev">Open Forma ↗</a></strong> · <a href="#run-locally">Run locally</a> · <a href="#controls">Controls</a> · <a href="md/USAGE.md">Technical guide</a></p>
+<p align="center"><strong><a href="https://protein.wiki">Open protein.wiki ↗</a></strong> · <a href="#run-locally">Run locally</a> · <a href="#controls">Controls</a> · <a href="md/USAGE.md">Technical guide</a></p>
 
-<img src="md/media/hemoglobin-porcelain.jpg" alt="Forma in Porcelain, showing the four-chain hemoglobin structure beside the visual molecular catalogue" width="1280">
+<img src="md/media/hemoglobin-porcelain.jpg" alt="protein.wiki in Porcelain, showing the four-chain hemoglobin structure beside the visual molecular catalogue" width="1280">
 <p align="center"><sub>Hemoglobin · PDB 4HHB · Porcelain</sub></p>
 
 ## Explore
@@ -54,7 +54,7 @@ Open **http://127.0.0.1:5187**. No API key or database is required.
 <details>
 <summary><strong>Data, rendering &amp; scientific notes</strong></summary>
 
-Forma uses experimental coordinates from [RCSB PDB](https://www.rcsb.org/) and the [Mol*](https://molstar.org/) renderer. This is a browser-based viewer; WebGL is required, and live archive search needs an internet connection.
+protein.wiki uses experimental coordinates from [RCSB PDB](https://www.rcsb.org/) and the [Mol*](https://molstar.org/) renderer. This is a browser-based viewer; WebGL is required, and live archive search needs an internet connection.
 
 Colours are illustrative. Surface mode shows a smoothed Gaussian envelope, not electron density. Camera movement is not molecular dynamics. Each structure links to its experimental record.
 

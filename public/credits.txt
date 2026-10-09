@@ -1,4 +1,4 @@
-Forma — Credits and licences
+protein.wiki — Credits and licences
 
 Molecular coordinates and experimental metadata: Worldwide Protein Data Bank, accessed through RCSB PDB. PDB archive coordinates: CC0.
 https://www.rcsb.org/pages/policies

@@ -1,4 +1,4 @@
-# Forma archive search — verified 9 October 2026
+# protein.wiki archive search — verified 9 October 2026
 
 Recommendation: search the live PDB archive on every submitted/debounced query. The 36 local entries are a visually diverse starting arrangement, not the database. The live count query returned **261,031 experimental entries**. Say “structures” or “PDB entries”; entries are not distinct molecules.
 
