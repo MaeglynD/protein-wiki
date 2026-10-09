@@ -10,6 +10,8 @@ try { index = Math.max(0, themes.findIndex(t => t.id === localStorage.getItem('f
 export const currentTheme = () => themes[index];
 function apply() {
   document.documentElement.dataset.theme = currentTheme().id;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#' + currentTheme().background.toString(16).padStart(6, '0'));
+
   document.documentElement.style.colorScheme = currentTheme().id === 'porcelain' ? 'light' : 'dark';
 }
 export function cycleTheme() {
