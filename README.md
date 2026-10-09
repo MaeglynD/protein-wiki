@@ -31,7 +31,7 @@ Use Node.js 22.12+ and [pnpm](https://pnpm.io/installation) 10.
 
 ```sh
 git clone https://github.com/MaeglynD/protein-wiki.git
-cd protein-visualiser
+cd protein-wiki
 pnpm install --frozen-lockfile
 pnpm dev
 ```
