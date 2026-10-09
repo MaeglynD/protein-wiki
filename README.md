@@ -52,7 +52,7 @@ Open **http://127.0.0.1:5187**. No API key or database is required.
 | Cycle themes | `T` |
 
 <details>
-<summary><strong>Data, rendering &amp; scientific notes</strong></summary>
+<summary><strong>Data, rendering &amp; scientific notes</strong></summary> 
 
 protein.wiki uses experimental coordinates from [RCSB PDB](https://www.rcsb.org/) and the [Mol*](https://molstar.org/) renderer. This is a browser-based viewer; WebGL is required, and live archive search needs an internet connection.
 
