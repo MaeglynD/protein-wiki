@@ -48,7 +48,7 @@ function methodName(m){return m==='X-RAY DIFFRACTION'?'X-ray':m==='ELECTRON MICR
 let labelAnimation, labelVersion=0;
 function renderLabel(){
  const m=state.item,info=metadata[m.id]||m,label=$('.structure-label'),version=++labelVersion;
- const update=()=>{document.title=`protein.wiki · ${m.name.length>58?m.id:m.name}`;$('#structure-id').textContent=m.id;$('#structure-name').textContent=m.name;$('#structure-meta').textContent=[info.organism,info.resolution?info.resolution+' Å':null,info.method?methodName(info.method):null].filter(Boolean).join(' · ')||'Biological assembly 1';label.dataset.entry=m.id;};
+ const update=()=>{document.title=`Protein.wiki · ${m.name.length>58?m.id:m.name}`;$('#structure-id').textContent=m.id;$('#structure-name').textContent=m.name;$('#structure-meta').textContent=[info.organism,info.resolution?info.resolution+' Å':null,info.method?methodName(info.method):null].filter(Boolean).join(' · ')||'Biological assembly 1';label.dataset.entry=m.id;};
  const changed=label.dataset.entry&&label.dataset.entry!==m.id;
  const opacity=getComputedStyle(label).opacity;
  labelAnimation?.cancel();
