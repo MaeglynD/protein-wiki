@@ -30,7 +30,7 @@ Filters cover protein/DNA/RNA content, source organism and experiment. Sort by r
 - Click a residue for a nearby, edge-aware action card to focus it or isolate its chain. Scrolling or clicking outside dismisses it.
 - Open the separate bottom-right display control to isolate chains, ligands or ions, choose colours, measure atom distances, export an image or copy a view link with the structure, camera, representation and colour.
 - Fit / R returns to the complete structure. F hides search. / focuses search. Arrow keys move among results.
-- Press **T** to cycle Porcelain (default), Graphite, Slate, Juniper and Aubergine. Themes blend without a status popup, and your last choice persists locally. Scientific colour modes are unchanged.
+- Use **Theme** in the structure controls, or press **T** to cycle Porcelain (default), Graphite, Slate, Juniper and Aubergine. Themes blend without a status popup, and your last choice persists locally. Scientific colour modes are unchanged.
 - The Structure panel stays open while switching chains or ligands, with the isolated component marked in its controls.
 - The structure name opens experimental metadata and the original PDB record.
 

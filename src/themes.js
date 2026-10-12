@@ -1,6 +1,6 @@
 export const themes = [
-  { id: 'graphite', name: 'Graphite', background: 0x191816 },
   { id: 'porcelain', name: 'Porcelain', background: 0xe9e6de },
+  { id: 'graphite', name: 'Graphite', background: 0x191816 },
   { id: 'slate', name: 'Slate', background: 0x10161d },
   { id: 'juniper', name: 'Juniper', background: 0x10201c },
   { id: 'aubergine', name: 'Aubergine', background: 0x201820 }
@@ -14,10 +14,13 @@ function apply() {
 
   document.documentElement.style.colorScheme = currentTheme().id === 'porcelain' ? 'light' : 'dark';
 }
-export function cycleTheme() {
-  index = (index + 1) % themes.length;
+export function setTheme(id) {
+  const next=themes.findIndex(t=>t.id===id);
+  if(next<0)return currentTheme();
+  index=next;
   try { localStorage.setItem('protein-wiki-theme', currentTheme().id); } catch {}
   apply();
-  return { ...currentTheme(), number: index + 1, total: themes.length };
+  return currentTheme();
 }
+export function cycleTheme() {return setTheme(themes[(index+1)%themes.length].id);}
 apply();

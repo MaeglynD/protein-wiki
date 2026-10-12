@@ -38,18 +38,18 @@ pnpm dev
 
 Open **http://127.0.0.1:5187**. No API key or database is required.
 
-`pnpm build` creates `dist/`. `pnpm test` checks coordinate-download recovery. See [deployment](md/DEPLOYMENT.md) for Cloudflare setup.
+`pnpm build` creates `dist/`. `pnpm test` checks download recovery, camera framing, catalogue assets and theme preferences. See [deployment](md/DEPLOYMENT.md) for Cloudflare setup.
 
 ## Controls
 
 | Action | Control |
 | :--- | :--- |
-| Rotate / zoom / pan | Drag / scroll or pinch / right-drag |
-| Inspect a residue | Click the structure |
+| Rotate / zoom / pan | Drag / scroll or pinch / right-drag or two-finger drag |
+| Inspect a residue | Click or tap the structure |
 | Search | `/` |
 | Fit the whole structure | `R` |
 | Hide or show the catalogue | `F` |
-| Cycle themes | `T` |
+| Change theme | `T`, or Theme in the structure controls |
 
 <details>
 <summary><strong>Data, rendering &amp; scientific notes</strong></summary> 

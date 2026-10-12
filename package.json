@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node tests/coordinate-recovery.mjs",
+    "test": "node tests/coordinate-recovery.mjs && node tests/stage-frame.mjs && node tests/theme-preferences.mjs",
     "deploy": "pnpm build && wrangler deploy"
   },
   "dependencies": {

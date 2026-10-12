@@ -1,3 +1,17 @@
+# Mobile and stage interaction review — 12 October 2026
+
+- Browser layout checks at 320 × 568, 390 × 844, 844 × 390 and 1440 × 900. The mobile toolbar contains all six controls; its buttons are at least 44 × 44 CSS pixels. Desktop keeps the separate structure button.
+- Mobile structure controls replace the catalogue area while browsing. In immersive mode, opening them reframes the molecule into the remaining stage. Chain switching leaves the controls open.
+- Repeated chain A/B switching, isolated Surface mode and sequence colouring were verified on 4HHB. Isolation and camera position remain intact through representation and colour changes.
+- Residue selection, smooth 950 ms focus, rotation, wheel zoom, fit/reset, catalogue collapse and reopening were exercised. R/F no longer also invoke Mol* camera-pan bindings. User gestures interrupt camera flights.
+- Atom-distance measurement on 1BNA returned a finite 5.06 Å result between the two picked atoms; clear distances was exercised. Obsolete loading operations check cancellation between pipeline stages.
+- Ribo retained Ribosome and Ribonuclease A; Rubre retained Rubredoxin. Filters, custom menus and the mobile theme selector were exercised. Explicit saved themes survive reload; fresh preferences start in Porcelain.
+- The opening sequence alternates shape, scale, molecular type and representation. All 44 curated coordinate files and thumbnails are checked by the test suite. Hemoglobin is the lightweight opening structure; larger viral shells and assemblies remain available in the collection.
+- All download-recovery, responsive framing, curated-asset and theme-preference checks pass, as does the production build. No console errors appeared during the browser checks.
+- Limits: these were browser viewport and pointer/keyboard checks, not physical iOS/Android device tests. Native pinch gestures, on-screen keyboards and device safe areas use the existing Mol* touch controls and browser viewport APIs, and should also be checked on real hardware.
+
+---
+
 # Iteration 6 verification — 9 October 2026
 
 - Removed the visible interaction hint, its event listeners and all associated styles. The viewer retains its accessible control description.

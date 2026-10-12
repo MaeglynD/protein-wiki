@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+let stored=new Map();
+globalThis.localStorage={getItem:k=>stored.get(k),setItem:(k,v)=>stored.set(k,v)};
+globalThis.document={documentElement:{dataset:{},style:{}},querySelector:()=>({setAttribute(){}})};
+const fresh=await import('../src/themes.js?fresh');
+assert.equal(fresh.currentTheme().id,'porcelain');assert.equal(document.documentElement.style.colorScheme,'light');
+assert.equal(fresh.cycleTheme().id,'graphite');
+assert.equal(stored.get('protein-wiki-theme'),'graphite');
+const returning=await import('../src/themes.js?returning');assert.equal(returning.currentTheme().id,'graphite');
+returning.setTheme('porcelain');assert.equal(document.documentElement.style.colorScheme,'light');
+stored=new Map([['protein-wiki-theme','missing']]);
+const invalid=await import('../src/themes.js?invalid');assert.equal(invalid.currentTheme().id,'porcelain');
+console.log('PASS light default, theme switching and saved preferences');

@@ -302,5 +302,7 @@ const openingScenes = [
   { id:'4HHB', representation:'cartoon', colorMode:'chain-id' }, // familiar four-lobed reference
 ];
 const all=[...originalCatalog,...additionalVisualRecords];
-const curatedOrder=['7AHL','1CWP','1BNA','1SHS','5T4O','1IGT','1AOI','1BRF','2TMV','4V9D','1YCE','1CAG','1PRC','1AON','7RSA','4HHB'];
+// Alternate silhouettes, scale and representation. A small, locally bundled
+// hemoglobin assembly opens quickly, including on phones; large shells are opt-in.
+const curatedOrder=['4HHB','1CWP','1BNA','5T4O','1IGT','1AOI','7AHL','1EHZ','1SHS','1BRF','2TMV','1CAG','4V9D','1PRC','1AON','7RSA','1YCE','1EMA','4OO8','1RB8'];
 export const catalog=[...curatedOrder.map(id=>({...all.find(m=>m.id===id),...openingScenes.find(m=>m.id===id)})),...all.filter(m=>!curatedOrder.includes(m.id))];
