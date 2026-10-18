@@ -18,7 +18,7 @@
 <img src="md/media/hemoglobin-porcelain.jpg" alt="protein.wiki in Porcelain, showing the four-chain hemoglobin structure beside the visual molecular catalogue" width="1280">
 <p align="center"><sub>Hemoglobin · PDB 4HHB · Porcelain</sub></p>
 
-## Explore
+## Explore (vibe coded w/ astra)
 
 - **Find a structure.** Search the experimental PDB by name, partial word, organism, ligand or PDB ID. Start with a curated collection of 44 varied structures.
 - **See its form.** Switch between ribbons, surfaces, atoms and bonds. Five themes keep the scene and controls coherent.
